@@ -5,6 +5,11 @@
     cursor: pointer;
     color: darkgray;
 }
+
+.activeIcon {
+    background-color: gold;
+}
+
 @media (max-width: 500px) {
     .wrapper-icon {
         display: flex;
@@ -14,5 +19,5 @@
 }
 
 i {
-    color: #eeeeee;
+    color: #eee;
 }

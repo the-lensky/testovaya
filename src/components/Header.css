@@ -1,0 +1,12 @@
+
+
+@media (max-width: 500px) {
+    .nav-wraper{
+        font-size: 12px;
+    }
+}
+
+i {
+    font-size: 30px;
+    color: #eee;
+}

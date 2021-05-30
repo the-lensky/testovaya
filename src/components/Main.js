@@ -24,6 +24,7 @@ const Main = () => {
                         setImages(data.photos.photo)
                     })
             } else {
+                setResponseData({})
                 setImages([])
             }
         }

@@ -76,7 +76,9 @@ input {
 }
 
 i {
+  color: #eee;
   cursor: pointer;
+  font-size: 30px;
 }
 
 .search-icon {

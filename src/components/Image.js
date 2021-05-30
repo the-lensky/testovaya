@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React, {useContext} from 'react'
 import './Image.css'
-import { ImageContext } from '../contex/state'
+import {ImageContext} from '../contex/state'
 
 
 const Image = (props) => {
@@ -13,15 +13,16 @@ const Image = (props) => {
 
     const savedImage = bookmarks.find(image => image.id === id)
 
-    const btnDisabler = savedImage ? 1 : 0
+    const btnDisabler = savedImage ? true : false
 
     return (
 
         <div className='col s12 m6 l4 image-wrapper'>
             <img className='card-image' src={imgPath} alt={title}/>
+            <p>{title}</p>
             <button
                 className="btn grey darken-4"
-                onClick={()=> addToBookmarks(props)}
+                onClick={() => addToBookmarks(props)}
                 disabled={btnDisabler}
             >
                 В избранное
