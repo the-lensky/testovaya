@@ -9,8 +9,7 @@ const API_KEY = process.env.REACT_APP_API_KEY
 const Main = () => {
 
     const {setImages, setResponseData, currentPage, responseData, images} = useContext(ImageContext)
-    console.log('responseData',responseData)
-    console.log('image',images)
+
     const [query, setQuery] = useState('')
 
     const API_URL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&page=${currentPage}&per_page=24&format=json&nojsoncallback=true&text=`
@@ -33,14 +32,9 @@ const Main = () => {
         }
     }
 
-    // useEffect(() => {
-    //         fetch(`${API_URL}${query}`)
-    //             .then(response => response.json())
-    //             .then(data => {
-    //                 setResponseData(data.photos)
-    //                 setImages(data.photos.photo)
-    //             })
-    //     }, [currentPage])
+    useEffect(() =>{
+        getImages(query)
+    } , [currentPage])
 
 
     return (
