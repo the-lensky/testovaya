@@ -10,19 +10,19 @@ import { ImageProvider } from './contex/state'
 
 const App = () => {
     return (
-        <Router>
-            <main className='wrapper grey darken-2'>
-                <Header/>
-                <ImageProvider>
+        <ImageProvider>
+            <Router>
+                <main className='wrapper grey darken-2'>
+                    <Header/>
                     <Sidebar/>
                     <Switch>
                         <Route path='/' exact component={Main}/>
                         <Route path='/bookmarks' component={Bookmarks}/>
                     </Switch>
-                </ImageProvider>
-                <Footer/>
-            </main>
-        </Router>
+                    <Footer/>
+                </main>
+            </Router>
+        </ImageProvider>
     )
 }
 

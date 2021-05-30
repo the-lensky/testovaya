@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './search.css'
 
-const Search = ({getImages}) => {
+const Search = ({getImages, query, setQuery}) => {
 
-    const [query, setQuery] = useState('')
+    // const [query, setQuery] = useState('')
 
     const handleChange = (e) => {
         e.preventDefault()
@@ -29,7 +29,7 @@ const Search = ({getImages}) => {
                 />
                 <i
                     className="material-icons prefix large icon search-icon"
-                    onClick={()=>getImages(query)}
+                    onClick={() => getImages(query)}
                 >search</i>
             </div>
         </div>

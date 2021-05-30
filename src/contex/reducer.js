@@ -1,4 +1,11 @@
-import { ADD_TO_BOOKMARKS, SET_IMAGES, SET_RESPONSE_DATA, REMOVE_FROM_BOOKMARKS } from './actions'
+import {
+    ADD_TO_BOOKMARKS,
+    SET_IMAGES,
+    SET_RESPONSE_DATA,
+    REMOVE_FROM_BOOKMARKS,
+    FETCH_NEXT_PAGE,
+    FETCH_PREV_PAGE
+} from './actions'
 
 export function reducer(state, action) {
     switch (action.type) {
@@ -13,8 +20,20 @@ export function reducer(state, action) {
         case SET_RESPONSE_DATA: {
             return {
                 ...state,
-                responseData: {...state.responseData, responseData: action.payload}
+                responseData: action.payload
             }
+        }
+
+        case FETCH_NEXT_PAGE: {
+            return {
+                ...state,
+                currentPage: state.currentPage + 1 }
+        }
+
+        case FETCH_PREV_PAGE: {
+            return {
+                ...state,
+                currentPage: state.currentPage + 1 }
         }
 
         case ADD_TO_BOOKMARKS: {
