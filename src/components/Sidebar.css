@@ -1,0 +1,18 @@
+.wrapper-icon{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    color: darkgray;
+}
+@media (max-width: 500px) {
+    .wrapper-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+i {
+    color: #eeeeee;
+}
