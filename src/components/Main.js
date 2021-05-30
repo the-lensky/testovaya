@@ -21,7 +21,6 @@ const Main = () => {
                 fetch(`${API_URL}${query}`)
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data.photos)
                         setResponseData(data.photos)
                         setImages(data.photos.photo)
                     })
@@ -34,10 +33,10 @@ const Main = () => {
         }
     }
 
-    useEffect(() => {
-        getImages()
-        console.log('USEEFFECT')
-    }, [currentPage])
+    // useEffect(() => {
+    //     getImages()
+    //     console.log('USEEFFECT')
+    // }, [currentPage])
 
 
     return (

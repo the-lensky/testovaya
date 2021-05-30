@@ -10,8 +10,8 @@ import { ImageProvider } from './contex/state'
 
 const App = () => {
     return (
-        <ImageProvider>
-            <Router>
+        <Router>
+            <ImageProvider>
                 <main className='wrapper grey darken-2'>
                     <Header/>
                     <Sidebar/>
@@ -21,8 +21,8 @@ const App = () => {
                     </Switch>
                     <Footer/>
                 </main>
-            </Router>
-        </ImageProvider>
+            </ImageProvider>
+        </Router>
     )
 }
 

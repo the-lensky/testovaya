@@ -23,9 +23,11 @@ export const ImageProvider = ({children}) => {
 
     const [state, dispatch] = useReducer(reducer, initialState)
 
+
     useEffect(() => {
         localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks))
     }, [state])
+
 
     state.setResponseData = (data) => {
         dispatch({type: SET_RESPONSE_DATA, payload: data})
