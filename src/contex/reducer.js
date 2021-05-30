@@ -33,7 +33,7 @@ export function reducer(state, action) {
         case FETCH_PREV_PAGE: {
             return {
                 ...state,
-                currentPage: state.currentPage + 1 }
+                currentPage: state.currentPage - 1 }
         }
 
         case ADD_TO_BOOKMARKS: {
@@ -49,8 +49,6 @@ export function reducer(state, action) {
                 bookmarks: state.bookmarks.filter(image => image.id !== action.payload)
             }
         }
-
-
 
         default:
             return state
